@@ -1,33 +1,33 @@
 # Welcome to Deep Tinker! 
 
-## Important Links: ## 
+## Important Links: 
  
-* Create an account: developer.mbed.org
-* Choose a board: developer.mbed.org/platform 
-* Programming environment: developer.mbed.org/compiler 
+* [Create an account](https://developer.mbed.org)
+* [Choose a board] (https://developer.mbed.org/platform) 
+* [Programming environment] (https://developer.mbed.org/compiler)
 
-## What is the BBC micro:bit? ##
+## What is the BBC micro:bit? 
 The micro:bit is an open development board that allows you to run code on it and have access to all the hardware. It can be used to make all sorts of things, from robots to musical instruments -- wherever your imagination takes you. It's packed with a whole lot of features, a few of which we'll be using today to detect when a friendly micro:bit is nearby: 
 
-#### LEDs ####
+#### LEDs 
 The LEDs on the front form a 5 x 5 grid. They can be set to on/off and the brightness can be controlled.
 
 If you turn your micro:bit over, you'll also see a yellow LED called the status LED. It flashes yellow when the system wants to tell the user that something has happened.
 
-#### Buttons #### 
+#### Buttons 
 Buttons A and B are a form of input. The micro:bit can detect either of its two buttons being pressed and un-pressed and be programmed to act on that or send the information to another device.
 
 Button R on the back of the micro:bit is a system button. When you have downloaded and run your code onto your BBC micro:bit, press Button R to restart and run your program from the beginning.
 
-#### Bluetooth ####
+#### Bluetooth 
 You will see a labelled BLE ANNTENA on the back of your micro:bit. The micro:bit is a peripheral device which can talk to a central device like a smart phone or tablet that has Bluetooth Low Energy (BLE). The BBC micro:bit can send signals and receive signals from a central device so another BLE device can control the micro:bit or the micro:bit can control another BLE device. Bluetooth Low Energy is just a power-friendly version of Bluetooth wireless technology.
 
-## Programming the BBC micro:bit ## 
+## Programming the BBC micro:bit 
 The micro:bit can be connected to your computer or device with a micro USB. When you plug your micro:bit into your computer, it shows up as a mass storage device labeled MICROBIT. Data can be sent and received between the micro:bit and the computer so programs can be downloaded from Windows and Macs onto the micro:bit via USB data connection. 
 
 The way we'll do this today is by dragging and dropping HEX files to the enumerated MICROBIT. Intel HEX is a file format that conveys binary information in ASCII text form and is commonly used for programming microcontrollers.
 
-#### Hello World! and a Peek into HEX Files #### 
+#### Hello World! and a Peek into HEX Files 
 
 To get started, we'll get our micro:bits to display 'Hello World!' on the LEDs. This is easy: 
 
@@ -47,7 +47,7 @@ To get started, we'll get our micro:bits to display 'Hello World!' on the LEDs. 
 
 When you click compile, the compiler converts the source code to machine code and outputs it into a HEX file. Before we flash the code onto our device by importing the file to the enumerated MICROBIT, let's go ahead and take a look at the contents of the generated HEX file.  
 
-#### HEX Files #### 
+#### HEX Files 
 
 Use your favorite text editor to view the contents of your HEX file. You'll see lines of ASCII text that are separated by return characters. Each text line contains hexadecimal characters that encode multiple binary numbers. The binary numbers may represent data, memory addresses, or other values, depending on their position in the line and the type and length of the line. Each text line is called a record.
 
@@ -66,11 +66,11 @@ A record consists of six fields that appear in order from left to right:
 
 The first record is known as an Extended Linear Address. The address field `0000` is ignored  and the byte count is always `02`. The data bytes for this record when combined with the lower 16 bits of all subsequent data records (type 00) specify their absolute address. 
 
-#### Flash! #### 
+#### Flash! 
 
 Drag and drop your HEX file onto the micro:bit. You'll notice the status LED blink several times and the words 'Hello World!' appear across the front of your micro:bit.  
 
-# Create and Display Images #
+# Create and Display Images 
 
 Images are a good way to create icons and emojis in your code. They're pretty easy to create -- we just create them like a variable, but provide some additional details that the `MicrobitImage` constructor requests.  
 
@@ -101,7 +101,7 @@ The constructor we will use to create our `MicrobitImage` takes three inputs: th
       
 Modify the `empty_heart_arr[]` to change your image. If you'd prefer to display a static image instead of an animated/scrolling one, replace `uBit.display.scroll(empty_heart, 80)` with `uBit.display.print(empty_heart)`. 
 
-# Micro:bit Button Press Events  #
+# Micro:bit Button Press Events  
 
 Often times, you need your program to hang around waiting for something to happen before it responds. In our goal for this workshop, it's going to be detecting a *friendly* micro:bit. Before we jump right to the end, let's learn how to detect that an event has occured by simulating some input event. The most obvious means of input on the micro:bit are its two buttons, labelled A and B.
 
@@ -139,7 +139,7 @@ This may sound a little complicated at first, but it's fairly intuitive once you
  
 Now, whenever the `MICROBIT_BUTTON__DOWN` event is raised by MICROBIT_ID_BUTTON_A, your code inside function onButtonA will be automatically run.
    
-# Radio # 
+# Radio 
 
 In addition to being a general purpose CPU, what makes the micro:bit pretty cool is its ability to interact wirelessly with the world around it using a 2.4GHz radio module. This radio can be configured in a number of ways, and is primarily designed to run the Bluetooth Low Energy (BLE) protocol. However, it can also be placed into a much simpler mode of operation that allows simple, direct micro:bit to micro:bit communication.
 
@@ -275,7 +275,7 @@ Any micro:bits receiving a datagram packet will also raise a `MICROBIT_RADIO_EVT
     }
    
 
-## Challenge ## 
+## Challenge  
 
 Make only certain microbits respond to messages. Work with your partner to figure out how to do this. Instructors will walk around to offer guidance. 
 
