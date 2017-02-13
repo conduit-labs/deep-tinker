@@ -3,7 +3,7 @@
 ## Important Links: 
  
 * [Create an account](https://developer.mbed.org)
-* [Choose a board] (https://developer.mbed.org/platform) 
+* [Choose a board] (https://developer.mbed.org/platforms/Microbit/) 
 * [Programming environment] (https://developer.mbed.org/compiler)
 
 ## What is the BBC micro:bit? 
