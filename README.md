@@ -3,8 +3,8 @@
 ## Important Links: 
  
 * [Create an account](https://developer.mbed.org)
-* [Choose a board] (https://developer.mbed.org/platforms/Microbit/) 
-* [Programming environment] (https://developer.mbed.org/compiler)
+* [Choose a board](https://developer.mbed.org/platforms/Microbit/) 
+* [Programming environment](https://developer.mbed.org/compiler)
 
 ## What is the BBC micro:bit? 
 The micro:bit is an open development board that allows you to run code on it and have access to all the hardware. It can be used to make all sorts of things, from robots to musical instruments -- wherever your imagination takes you. It's packed with a whole lot of features, a few of which we'll be using today to detect when a friendly micro:bit is nearby: 
